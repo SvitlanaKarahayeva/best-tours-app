@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+    <link rel="stylesheet" href="../../public/stylesheets/tourShow.css">
+    <title>Tour details</title>
+</head>
+<body>
+    <div class="mt-4">
+        <h4>Deails page</h4>
+        <b-card img-src="<%= tour.image %> " img-alt="Tour image" img-left class="mb-3">
+          <b-card-text>
+            <%= tour.description %> 
+          </b-card-text>
+        </b-card>
+    </div>
+
+<%- include('../partials/footer') %>

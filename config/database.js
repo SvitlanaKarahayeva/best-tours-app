@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// mongoose.connect(process.env. DATABASE_URL,{
 mongoose.connect('mongodb://localhost/best-trips', {
   useNewUrlParser: true,
   useUnifiedTopology: true,

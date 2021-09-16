@@ -4,25 +4,22 @@
 </head>
 <body>
     <!-- Cards bootstrap template -->
-
     <% tours.forEach(tour =>{ %> 
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="<%= tour.image %> " alt="Tour image">
+            
             <div class="card-body">
               <h5 class="card-title"><%= tour.name %></h5>
             </div>
+            
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><b>Where: </b><%= tour.location %> </li>
             </ul>
-            <div class="card-body">
-                <button type="button" class="btn btn-outline-info"><a href="/tours/<%= tour._id %> ">Details</a></button>
-              
             
+            <div class="card-body">
+                <a class="btn btn-primary" href="/tours/<%= tour._id %>" role="button">Details</a>
             </div>
           </div>
     <% }) %> 
 
-
-
-</body>
-</html>
+<%- include('../partials/footer') %>
