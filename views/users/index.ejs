@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+    <title>User's page</title>
+</head>
+<body>
+    
+    <!-- Add login UI here -->
+	<% if (typeof user !== 'undefined') { %>
+		<span style="margin-right: 20vw">Hello, <%= user.name %></span>
+		
+		<a href="/logout">Log Out</a>
+	<% } else { %>
+		<a href="/auth/google">Login with Google to book your tour</a>
+	<% } %>
+	
+
+</body>
+</html>

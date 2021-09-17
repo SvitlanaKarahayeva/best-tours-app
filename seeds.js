@@ -1,6 +1,8 @@
-const mongoose = require('mongoose')
-const Tour = require('./models/tour')
+require('dotenv').config()
 require('./config/database')
+
+
+const Tour = require('./models/tour')
 
 const seedTours = [
     {

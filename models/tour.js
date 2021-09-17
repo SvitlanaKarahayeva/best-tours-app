@@ -24,7 +24,12 @@ const tourSchema = new Schema({
     description: {
         type: String
     },
+    booking: {
+        type: Schema.Types.ObjectId, 
+        ref: 'Booking'}
 
 })
 
 module.exports = mongoose.model('Tour', tourSchema)
+
+
