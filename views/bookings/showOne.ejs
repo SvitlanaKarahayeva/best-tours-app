@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>
+
+    <link rel="stylesheet" href="../../public/stylesheets/tourShow.css">
+    <title>Bookings page</title>
+</head>
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <h2>Thank you for your booking, <%= user.name %>. Administartor will contact you shortly. </h2> 
+     
+  <!-- Cards bootstrap template -->
+     <h3>You have booked: </h3>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<%= tour.image %> " alt="Tour image">
+            
+            <div class="card-body">
+              <h5 class="card-title"><%= tour.name %></h5>
+            </div>
+            
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>Where: </b><%= tour.location %> </li>
+            </ul>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>When: </b><%= newBooking.date %> </li>
+              </ul>
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Number of people:</b><%= newBooking.people %> </li>
+              </ul>
+          
+            <div class="card-body">
+                <a class="btn btn-primary" href="/tours/<%= tour._id %>" role="button">Details</a>
+            </div>
+           
+          </div>
+   
+
+  <%- include('../partials/footer') %>

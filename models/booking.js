@@ -10,15 +10,15 @@ const bookingSchema = new Schema({
     },
     date: {
         type: Date,
-        default: Date.now(),
+        default: function(){
+            let day = new Date();
+            day.setFullYear(d.getFullYear() + 1);
+            return day
+        },
         required: true
     },
-    tourType: {
-        type: String,
-        enum: ['Aqua Advantures', 'Historical places', 'Food Tasting', "Fun activities"]
-    },
-    location: {
-        type: String
+    phoneNumber: {
+        type: Number
     },
     user: {
             type: Schema.Types.ObjectId, 

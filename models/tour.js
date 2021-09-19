@@ -24,9 +24,10 @@ const tourSchema = new Schema({
     description: {
         type: String
     },
-    booking: {
+    booking: [{
         type: Schema.Types.ObjectId, 
-        ref: 'Booking'}
+        ref: 'Booking'
+    }]
 
 })
 

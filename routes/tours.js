@@ -8,7 +8,8 @@ router.get('/', tourCtrl.index)
 /* show one tour - Details page*/
 router.get('/:id', tourCtrl.showOne)
 
-/*  */
+/* create booking for a particular tour */
+router.post('/:id', tourCtrl.createBooking)
 /*  */
 
 
