@@ -23,7 +23,12 @@ const bookingSchema = new Schema({
     user: {
             type: Schema.Types.ObjectId, 
             ref: 'User'
+    },
+    tour: {
+        type: Schema.Types.ObjectId, 
+        ref: 'Tour'
     }
+
 })
 
 module.exports = mongoose.model('Booking', bookingSchema)

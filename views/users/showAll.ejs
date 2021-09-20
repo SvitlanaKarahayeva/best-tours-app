@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+    <link rel="stylesheet" href="../../public/stylesheets/tourShow.css">
+    <title>Tour details</title>
+</head>
+<body>
+
+<%- include('../partials/navbar') %>
+
+<% for(let user.booking of b) =>{ %> 
+    <!-- <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= b.date %> " alt="Tour image"> -->
+        
+        <div class="card-body">
+          <h5 class="card-title"><%= b.people %></h5>
+        </div>
+        
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Where: </b><%= b.phoneNumber %> </li>
+        </ul>
+      
+        <!-- <div class="card-body">
+            <a class="btn btn-primary" href="/tours/tour._id %>" role="button">Details</a> -->
+        </div>
+       
+      </div>
+<% } %> 
+
+<%- include('../partials/footer') %>

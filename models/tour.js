@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const Booking = require('../models/booking')
 const Schema = mongoose.Schema
 
 const tourSchema = new Schema({
@@ -12,7 +12,7 @@ const tourSchema = new Schema({
     },
     tourType: {
         type: String,
-        enum: ['Aqua Advantures', 'Historical places', 'Food Tasting', "Fun activities"]
+        enum: ['Aqua Advantures', 'Historical places', 'Food Tasting', 'Fun activities']
     },
     location: {
         type: String
@@ -29,6 +29,13 @@ const tourSchema = new Schema({
         ref: 'Booking'
     }]
 
+})
+//middleware that would delete associated bookings along with deleted tour
+tourSchema.post('findOneAndDelete', async function(tour){
+    if(tour.booking.length){
+        const deletedData = await Booking.deleteMany({_id: { $in: tour.booking}})
+        console.log(deletedData)
+    }
 })
 
 module.exports = mongoose.model('Tour', tourSchema)

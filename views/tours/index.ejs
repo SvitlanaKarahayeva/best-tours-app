@@ -22,7 +22,16 @@
           
             <div class="card-body">
                 <a class="btn btn-primary" href="/tours/<%= tour._id %>" role="button">Details</a>
-            </div>
+
+                <!-- show buttons- DELETE AND UPDATE only to Admin user -->
+                <% if (typeof user !== 'undefined' && user.email === "user.besttours@gmail.com") { %>
+                  <a class="btn btn-warning" href="/tours/<%= tour._id %>/update" role="button">Update</a>
+                  <!-- delete form and btn -->
+                  <form action="/tours/<%= tour._id %>?_method=DELETE" method="POST">
+                      <button class="btn btn-danger">Delete</button>
+                  </form>
+                <% } else {} %>
+              </div>
            
           </div>
     <% }) %> 

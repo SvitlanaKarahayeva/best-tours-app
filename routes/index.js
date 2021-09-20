@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-//oath 
+//oAuth with Google
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: ['profile', 'email'] }

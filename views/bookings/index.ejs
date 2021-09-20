@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+
+    <link rel="stylesheet" href="../../public/stylesheets/tourShow.css">
+    <title>Bookings page</title>
+</head>
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <h1>All bookings</h1>
+  <thead>
+    <tr>
+      <th scope="col">Tour name</th>
+      <th scope="col">Client info</th>
+      <th scope="col">Date</th>
+      <th scope="col">Number of people</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <% flights.forEach(function (f) {%>  
+       <tr>
+        <td></td>
+        <td> </td>
+        <td></td>
+        <td></td>
+        <td> 
+          <a href=""><button>Details</button></a> 
+        </td>
+    
+      </tr>
+      <% }); %>  
+      
+  </tbody>
+</table>
+
+
+  <%- include('../partials/footer') %>

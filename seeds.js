@@ -1,7 +1,6 @@
 require('dotenv').config()
 require('./config/database')
 
-
 const Tour = require('./models/tour')
 
 const seedTours = [
@@ -111,7 +110,7 @@ const seedTours = [
         description: "Spend the night like a celebrity with a VIP Gold Member admission ticket to Coco Bongo, Cancun’s most famous nightlife venue. Your VIP pass includes both skip-the-line and early entry, which saves you hours of waiting in line and grants you access to the club one hour before it opens to the general public. Take advantage of an open bar featuring premium spirits throughout the evening and guarantee a front-row seat for the show with early entry."
     }
 ]
-
+Tour.deleteMany({})
 Tour.insertMany(seedTours)
 .then(res => {
     console.log(res)
@@ -119,3 +118,9 @@ Tour.insertMany(seedTours)
 .catch(err => {
     console.log(err)
 }) 
+
+// baby yoda images for testing
+// https://i.imgur.com/8q55vWV.png
+//https://i.imgur.com/8gzEE1v.jpg
+//https://i.imgur.com/XxPkEoX.jpg
+//https://i.imgur.com/fyA9WUy.jpg

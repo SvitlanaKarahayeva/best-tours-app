@@ -2,19 +2,20 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-const session = require('express-session'); //
-const passport = require('passport') //
+const session = require('express-session'); 
+const passport = require('passport') 
 var logger = require('morgan');
 
 const methodOverride = require('method-override')
 
-require('dotenv').config() //
+require('dotenv').config()
 require('./config/database') 
 require('./config/passport')
 
 var indexRouter = require('./routes/index');
 var toursRouter = require('./routes/tours');
 var usersRouter = require('./routes/users');
+var bookingsRouter = require('./routes/bookings');
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use(methodOverride('_method'))
 app.use('/', indexRouter);
 app.use('/tours', toursRouter);
 app.use('/users', usersRouter);
+app.use('/bookings', bookingsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
