@@ -45,10 +45,10 @@
             <div class="form-group">  
                 <label>Description</label>
 
-                <input type="text" name="description" placeholder="description" value="<%= tour.description %>">
-                <!-- <textarea name="description" rows="5" cols="50" >
-                    <input type="text" name="description" placeholder="description" value="< tour.description %>">
-                </textarea> -->
+                <!-- <input type="text" name="description" placeholder="description" value="< tour.description %>"> -->
+                <textarea name="description" rows="5" cols="50" name="description" placeholder="description" value="<%= tour.description %>" >
+                    <%= tour.description %>
+                </textarea>
             </div>
 
       

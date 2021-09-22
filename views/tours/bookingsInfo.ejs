@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<%- include('../partials/navbar') %>
+
+    <title>All tours</title>
+</head>
+<body>
+  <h2>Booking information for <a href="/tours/<%= tour._id %>"><%= tour.name %></a> </h2>
+  <h3>Client information</h3>
+  <%= user.name %> 
+  <%= tour.booking.phoneNumber %> 
+  <%= user.email %> 
+    <!-- Cards bootstrap template -->
+    <% tour.booking.forEach(b =>{ %> 
+            
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>When: </b><%= b.date %> </li>
+            </ul>
+          
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Number of People: </b><%= b.people %> </li>
+              </ul>
+           
+          </div>
+    <% }) %> 
+
+<%- include('../partials/footer') %>

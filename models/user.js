@@ -9,6 +9,10 @@ const userSchema = new Schema({
     booking: [{
         type: Schema.Types.ObjectId, 
         ref: 'Booking'
+    }],
+    tour: [{
+        type: Schema.Types.ObjectId, 
+        ref: 'Tour'
     }]
 })
 

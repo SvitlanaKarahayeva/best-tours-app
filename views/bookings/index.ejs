@@ -18,12 +18,14 @@
   </thead>
   <tbody>
     
-      <% flights.forEach(function (f) {%>  
+      <% users.forEach(function (u) {%>  
        <tr>
-        <td></td>
-        <td> </td>
-        <td></td>
-        <td></td>
+        <td>u.name</td>
+        <td>u.name u.email</td>
+        <% user.booking.forEach(function(b){ %> 
+        <td> b.date</td>
+        <td>b.people</td>
+        <% }) %> 
         <td> 
           <a href=""><button>Details</button></a> 
         </td>

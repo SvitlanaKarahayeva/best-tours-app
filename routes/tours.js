@@ -21,5 +21,8 @@ router.put('/:id', toursCtrl.updateTour)
 
 /* Delete tour - by Admin user only */
 router.delete('/:id', toursCtrl.deleteTour)
+
+/* Show the details of the booking for a particular tour*/
+router.get('/:id/bookings', toursCtrl.showTourBookingInfo)
  
 module.exports = router;

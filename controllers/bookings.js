@@ -3,14 +3,12 @@ const Tour = require('../models/tour')
 const User = require('../models/user')
 
 async function index(req, res){
-    const tours = await Tour.find({}).populate('booking')
-    const bookings = await Booking.find({}).populate('tour')
-    const users = await User.find({})
-    console.log(bookings)
-    console.log(tours)
+   
+    const tours = await Tour.find({}).populate('booking').populate('user')
     
 
-    res.render('bookings/index', {tours, bookings, users})
+    console.log(tours)
+    res.render('bookings/index', {tours})
 }
 
 module.exports = {

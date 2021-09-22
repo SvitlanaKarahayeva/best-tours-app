@@ -1,4 +1,5 @@
 const Booking = require('../models/booking')
+const tour = require('../models/tour')
 const Tour = require('../models/tour')
 const User = require('../models/user')
 
@@ -44,7 +45,9 @@ async function createBooking(req, res){
     })
     tour.booking.push(newBooking)
     user.booking.push(newBooking)
+    newBooking.tour = tour
     newBooking.user = user
+    user.tour.push(tour)
 
     await tour.save()
     await user.save()
@@ -66,11 +69,14 @@ async function updateTour(req, res){
 /* Delete tour - by Admin user only */
 async function deleteTour(req, res){
     const tour = await Tour.findByIdAndDelete(req.params.id)
-    console.log("DELETED")
     res.redirect('/tours')
 }
 
-/* show all booked tours for a particular user */
+/* show  booking info for a particular user based on tour id - that is why in the tours controller*/
+async function showTourBookingInfo(req, res){
+    const tour = await Tour.findById(req.params.id).populate('booking')
+    res.render('tours/bookingsInfo', { tour })
+}
 
 module.exports = {
     index: showAll,
@@ -80,5 +86,6 @@ module.exports = {
     createBooking,
     showUpdateForm,
     updateTour,
-    deleteTour
+    deleteTour,
+    showTourBookingInfo
 }
