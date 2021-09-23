@@ -5,7 +5,7 @@
 <body>
     <!-- Add login UI here -->
 	<% if (typeof user !== 'undefined') { %>
-		<span style="margin-right: 20vw">Hello, <%= user.name %></span>
+		<span>Hello, <%= user.name %></span>
 		
 		<a href="/logout">Log Out</a>
 	<% } else { %>

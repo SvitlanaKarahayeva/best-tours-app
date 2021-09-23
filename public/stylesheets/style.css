@@ -1,8 +1,25 @@
+*{
+  box-sizing: border-box;
+}
 body {
-  padding: 50px;
+  padding: 46px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
   color: #00B7FF;
 }
+/* google login icon and sign from views/partials.navbar.ejs */
+#google-div{
+  text-align:right;
+  margin: 10px;
+  font-size: 18px
+}
+
+/* views/index.ejs */
+#head-name{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+

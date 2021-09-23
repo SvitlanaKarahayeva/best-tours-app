@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>
-
-<%- include('../partials/navbar') %>
+<link rel='stylesheet' href='../stylesheets/style.css'/>
 
     <title>All tours</title>
 </head>
 <body>
+  <%- include('../partials/navbar') %>
   <h2>This is tour page</h2>
   
     <!-- Cards bootstrap template -->
@@ -28,7 +28,7 @@
                   <a class="btn btn-warning" href="/tours/<%= tour._id %>/update" role="button">Update</a>
                   <!-- delete form and btn -->
                   <form action="/tours/<%= tour._id %>?_method=DELETE" method="POST">
-                      <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-danger">Delete</button>
                   </form>
                 <% } else {} %>
               </div>
