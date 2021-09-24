@@ -1,4 +1,5 @@
 var express = require('express');
+const tours = require('../controllers/tours');
 var router = express.Router();
 const toursCtrl = require('../controllers/tours')
 
@@ -7,7 +8,7 @@ router.get('/', toursCtrl.index)
 
 /* create new tour - by admin user only */
 router.get('/new', toursCtrl.showCreateForm)
-router.post('/', toursCtrl.createTour)
+router.post('/new/create', toursCtrl.createTour)
 
 /* Show one tour - Details page*/
 router.get('/:id', toursCtrl.showOne)
@@ -24,5 +25,6 @@ router.delete('/:id', toursCtrl.deleteTour)
 
 /* Show the details of the booking for a particular tour*/
 router.get('/:id/bookings', toursCtrl.showTourBookingInfo)
+
  
 module.exports = router;

@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
 }
+
 body {
   padding: 46px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -10,16 +11,49 @@ body {
 a {
   color: #00B7FF;
 }
+
 /* google login icon and sign from views/partials.navbar.ejs */
 #google-div{
   text-align:right;
   margin: 10px;
-  font-size: 18px
+  font-size: 18px;
 }
 
-/* views/index.ejs */
-#head-name{
+/* Main page */
+/* header-name styling for each page*/
+.head-name{
   text-align: center;
+  margin: 10px;
   font-family: 'Permanent Marker', cursive;
+
+}
+button{
+  margin: 3px;
+}
+/* Tours views */
+/* index.ejs styling */
+.card{
+  margin: 20px;
+  border: 4mm ridge rgba(108, 213, 215, 0.6);
+  padding: 10px;
+  box-shadow: 5px 10px 18px lightsteelblue;
 }
 
+#cards-container{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* update.ejs and new.ejs */
+.update-create-form{
+  max-width: 70%;
+  margin:10px; 
+}
+.form-group{
+  margin: 5px;
+}
+label{
+  font-size: 22px
+}

@@ -3,7 +3,7 @@ const tour = require('../models/tour')
 const Tour = require('../models/tour')
 const User = require('../models/user')
 
-/* show all tours */
+/* Show all tours */
 async function showAll(req, res){
     const tours = await Tour.find({})
     res.render('tours/index', { tours })
@@ -64,6 +64,8 @@ async function updateTour(req, res){
     const id = req.params.id
     const tour = await Tour.findByIdAndUpdate(id, req.body)
     res.redirect(`/tours/${tour._id}`)
+    // console.log(req.body)
+    // res.send("PUT")
 }
 
 /* Delete tour - by Admin user only */

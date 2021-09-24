@@ -5,8 +5,12 @@
 </head>
 <body>
   <%- include('../partials/navbar') %>
-  <h2>This is tour page</h2>
+
+  <div class="head-name">
+    <h2>Check all the tours we've got</h2>
+  </div>
   
+  <div id="cards-container">
     <!-- Cards bootstrap template -->
     <% tours.forEach(tour =>{ %> 
         <div class="card" style="width: 18rem;">
@@ -21,6 +25,7 @@
             </ul>
           
             <div class="card-body">
+              <div class="buttons">
                 <a class="btn btn-primary" href="/tours/<%= tour._id %>" role="button">Details</a>
 
                 <!-- show buttons- DELETE AND UPDATE only to Admin user -->
@@ -32,8 +37,9 @@
                   </form>
                 <% } else {} %>
               </div>
-           
+            </div>
           </div>
     <% }) %> 
+  </div>
 
 <%- include('../partials/footer') %>
