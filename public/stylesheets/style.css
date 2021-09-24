@@ -37,6 +37,8 @@ button{
   border: 4mm ridge rgba(108, 213, 215, 0.6);
   padding: 10px;
   box-shadow: 5px 10px 18px lightsteelblue;
+  align-items: center;
+  height: 500px
 }
 
 #cards-container{
@@ -44,6 +46,7 @@ button{
   flex-direction:row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center
 }
 
 /* update.ejs and new.ejs */
@@ -56,4 +59,27 @@ button{
 }
 label{
   font-size: 22px
+}
+
+/* show details page show.ejs */
+#show-container{
+  margin: 20px;
+  max-width: 80%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+#pics{
+  max-width: 40%;
+  max-height:40%
+}
+.booking-container{
+  border: 2px solid grey
+}
+div.jumbotron{
+  max-width: 500px
+}
+.spans{
+  color: green
 }

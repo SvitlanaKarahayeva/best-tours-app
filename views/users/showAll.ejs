@@ -17,7 +17,7 @@
             <img class="card-img-top" src="<%= tour.image %> " alt="Tour image">
             
             <div class="card-body">
-              <h5 class="card-title"><%= tour.name %></h5>
+              <h5 class="card-title"><a href="/tours/<%= tour._id %>"><%= tour.name %></a></h5>
             </div>
             
             <ul class="list-group list-group-flush">
@@ -27,7 +27,7 @@
           
             <div class="card-body">
               <div class="buttons">
-                <a class="btn btn-primary" href="/tours/<%= tour._id %>" role="button">Details</a>
+    
                 <a class="btn btn-primary" href="/tours/<%= tour._id %>/bookings" role="button">Booking details</a>             
               </div>
             </div>

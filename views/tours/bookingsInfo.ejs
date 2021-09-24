@@ -1,27 +1,32 @@
 <%- include('../partials/header') %>
-
+<link rel='stylesheet' href='/stylesheets/style.css'/>
 <%- include('../partials/navbar') %>
 
-    <title>All tours</title>
+    <title>Booking info</title>
 </head>
 <body>
-  <h2>Booking information for <a href="/tours/<%= tour._id %>"><%= tour.name %></a> </h2>
-  <h3>Client information</h3>
+  <h3>Booking information for <a href="/tours/<%= tour._id %>"><%= tour.name %></a> </h3>
+  
   <%= user.name %> 
   <%= tour.booking.phoneNumber %> 
   <%= user.email %> 
     <!-- Cards bootstrap template -->
     <% tour.booking.forEach(b =>{ %> 
-            
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><b>When: </b><%= b.date %> </li>
-            </ul>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">People attending</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= b.date %> </td>
+            <td><%= b.people %></td>
+          </tr>
+        </tbody>
+      </table>
           
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Number of People: </b><%= b.people %> </li>
-              </ul>
-           
-          </div>
     <% }) %> 
 
 <%- include('../partials/footer') %>

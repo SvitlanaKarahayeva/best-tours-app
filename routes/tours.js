@@ -14,11 +14,11 @@ router.post('/new/create', toursCtrl.createTour)
 router.get('/:id', toursCtrl.showOne)
 
 /* Create booking for a particular tour, form is on a tour's details page */
-router.post('/:id', toursCtrl.createBooking)
+router.post('/booking/:id', toursCtrl.createBooking)
 
 /* Update tour - update page- by Admin user only*/
 router.get('/:id/update', toursCtrl.showUpdateForm)
-router.put('/:id', toursCtrl.updateTour)
+router.put('/update/:id', toursCtrl.updateTour)
 
 /* Delete tour - by Admin user only */
 router.delete('/:id', toursCtrl.deleteTour)
