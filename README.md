@@ -13,10 +13,11 @@ Admin user Google account information: email: user.besttours@gmail.com, password
   # Images of the app
   
   ![](https://i.imgur.com/K5tVSES.png)
+  ![](https://i.imgur.com/7tgjg9F.png)
+  ![](https://i.imgur.com/qYPpa7T.png)
+  ![](https://i.imgur.com/MbgzvJv.png)
+  ![](https://i.imgur.com/cnuzsHW.png)
 
-  <img src="https://i.imgur.com/7tgjg9F.png" width="420" height="450"> <img src="https://i.imgur.com/qYPpa7T.png" width="420" height="450">
-  
-<img src="https://i.imgur.com/MbgzvJv.png" width="300" height="300"> <img src="https://i.imgur.com/cnuzsHW.png" width="300" height="300"> <img src="https://i.imgur.com/3m5PrZD.png" width="300" height="300">
  
   
   ## Technologies Used:
