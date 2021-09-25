@@ -5,7 +5,7 @@ Best-Tours is a full-CRUD Express app deployed and hosted on Heroku.
 ## Main functionality of the app  
 
 The application desplays all possible tours that are available for booking. Login with Google opens up more functionalities
-1) Admin user only can create, update, delete all tours. If the tout=r is deleted all booking wiill be deleted as well.
+1) Admin user only can create, update, delete all tours. If the tour is deleted all bookings wiill be deleted as well.
 Admin user Google account information: email: user.besttours@gmail.com, password: Besttours2021
 2) Any other user logged in with Google can review and book tours. Review their booked tours and booking details.
 3) User who is not looged in with Google can review main page and tours details information.
@@ -38,5 +38,5 @@ Admin user Google account information: email: user.besttours@gmail.com, password
   
   * More CRUD functionality for the client user: e.g. review and update their contact information
   * Sorting tours by type
-  * More advance styling and Mobile-friendly User Interface
+  * Advanced styling and Mobile-friendly User Interface
   
