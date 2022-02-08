@@ -1,4 +1,4 @@
-# [Best tours app](http://best-tours-app.herokuapp.com/)
+# [Best tours in Mexico](http://best-tours-app.herokuapp.com/)
 
 Best-Tours is a full-CRUD Express app deployed and hosted on Heroku.
 
