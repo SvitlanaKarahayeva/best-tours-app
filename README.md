@@ -1,4 +1,4 @@
-# [Best-tours-app](http://best-tours-app.herokuapp.com/)
+# [Best tours app](http://best-tours-app.herokuapp.com/)
 
 Best-Tours is a full-CRUD Express app deployed and hosted on Heroku.
 
